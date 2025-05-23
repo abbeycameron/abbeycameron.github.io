@@ -1,13 +1,39 @@
 import { Typography, Box, Chip, Stack, Divider, ListItem } from "@mui/material";
 import ImgMediaCard from "./CardFormat";
+import { useState } from "react";
 
 function Experience() {
+  const [selectedTag, setSelectedTag] = useState(null);
+
+  const cards = [
+    { image: "django-icon.svg", alt: "Django Logo", tags: ["Python"] },
+    {
+      image: "logo512.png",
+      alt: "React logo",
+      tags: ["Javascript", "Typescript", "CSS"],
+    },
+    {
+      image: "mui-logo.png",
+      alt: "MUI Logo",
+      tags: ["Javascript", "Typescript"],
+    },
+    {
+      image: "react-native-logo.png",
+      alt: "React Native Logo",
+      tags: ["Typescript", "CSS"],
+    },
+  ];
+
+  const filteredCards = selectedTag
+    ? cards.filter((card) => card.tags.includes(selectedTag))
+    : cards;
+
   return (
     <>
       <Box sx={{ display: "flex", marginTop: 10, justifyContent: "center" }}>
         <Typography
           variant="h2"
-          sx={{ fontFamily: "Bonbon", color: "#db5cb1" }}
+          sx={{ fontFamily: "Bonbon", color: "#d945a8" }}
         >
           Experiences
         </Typography>
@@ -16,7 +42,7 @@ function Experience() {
       <Box sx={{ marginTop: 4, maxWidth: 900, mx: "auto", textAlign: "left" }}>
         <Typography variant="h5" sx={styles.header}>
           Bachelor of Computing -{" "}
-          <span style={{ color: "#db5cb1" }}> Queen's University</span>
+          <span style={{ color: "#d945a8" }}> Queen's University</span>
         </Typography>
 
         <ListItem variant="body1" sx={styles.body}>
@@ -25,7 +51,7 @@ function Experience() {
 
         <Typography variant="h5" sx={styles.header}>
           Software Developer -{" "}
-          <span style={{ color: "#db5cb1" }}>
+          <span style={{ color: "#d945a8" }}>
             Centre for Advanced Computing
           </span>
         </Typography>
@@ -40,28 +66,53 @@ function Experience() {
       <Box sx={{ display: "flex", marginTop: 5, justifyContent: "center" }}>
         <Typography
           variant="h2"
-          sx={{ fontFamily: "Bonbon", color: "#db5cb1" }}
+          sx={{ fontFamily: "Bonbon", color: "#d945a8" }}
         >
           Toolbox
         </Typography>
       </Box>
+      <Box sx={{ display: "flex", paddingBottom: 2, justifyContent: "center" }}>
+        <Typography variant="h5" sx={styles.header}>
+          Software Development Tools
+        </Typography>
+      </Box>
 
       <Stack direction="row" spacing={1} justifyContent="center">
-        <Chip sx={styles.chip} label="Python" variant="outlined"></Chip>
-        <Chip sx={styles.chip} label="Javascript" variant="outlined"></Chip>
-        <Chip sx={styles.chip} label="Typescript" variant="outlined"></Chip>
-        <Chip sx={styles.chip} label="Java" variant="outlined"></Chip>
-        <Chip sx={styles.chip} label="HTML" variant="outlined"></Chip>
+        {["Python", "Javascript", "Typescript", "CSS"].map((tag) => (
+          <Chip
+            key={tag}
+            sx={styles.chip}
+            label={tag}
+            variant="outlined"
+            clickable
+            onClick={() => setSelectedTag(tag)}
+          />
+        ))}
+        <Chip
+          label="All"
+          variant="outlined"
+          clickable
+          onClick={() => setSelectedTag(null)}
+          sx={styles.chip}
+        />
       </Stack>
 
       <Stack direction="row" spacing={5} justifyContent="center" paddingTop={5}>
-        <ImgMediaCard image="logo512.png" alt="React logo"></ImgMediaCard>
-        <ImgMediaCard image="django-icon.svg" alt="django Logo"></ImgMediaCard>
-        <ImgMediaCard image="mui-logo.png" alt="MUI Logo"></ImgMediaCard>
-        <ImgMediaCard
-          image="react-native-logo.png"
-          alt="React Native Logo"
-        ></ImgMediaCard>
+        {filteredCards.map((card, index) => (
+          <ImgMediaCard key={index} image={card.image} alt={card.alt} />
+        ))}
+      </Stack>
+
+      <Box sx={{ display: "flex", padding: 2, justifyContent: "center" }}>
+        <Typography variant="h5" sx={styles.header}>
+          Other Languages
+        </Typography>
+      </Box>
+
+      <Stack direction="row" spacing={1} justifyContent="center">
+        {["HTML", "C", "C++", "Java"].map((tag) => (
+          <Chip key={tag} sx={styles.chip} label={tag} variant="outlined" />
+        ))}
       </Stack>
     </>
   );
@@ -82,7 +133,7 @@ export const styles = {
   },
   chip: {
     fontFamily: "Open Sans",
-    color: "#db5cb1",
+    color: "#d945a8",
     fontWeight: "bold",
   },
 };
