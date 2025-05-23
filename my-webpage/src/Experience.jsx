@@ -51,6 +51,7 @@ function Experience() {
         <Chip sx={styles.chip} label="Javascript" variant="outlined"></Chip>
         <Chip sx={styles.chip} label="Typescript" variant="outlined"></Chip>
         <Chip sx={styles.chip} label="Java" variant="outlined"></Chip>
+        <Chip sx={styles.chip} label="HTML" variant="outlined"></Chip>
       </Stack>
 
       <Stack direction="row" spacing={5} justifyContent="center" paddingTop={5}>

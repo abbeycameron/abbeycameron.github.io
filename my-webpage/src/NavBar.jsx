@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 
 export default function Layout() {
   const navigate = useNavigate();
-  const fancyFont = { fontFamily: "Delius Swash Caps" };
 
   return (
     <div>
@@ -25,15 +24,15 @@ export default function Layout() {
               </Button>
               <Button
                 style={styles.navButton}
-                onClick={() => navigate("/pets")}
-              >
-                Pets
-              </Button>
-              <Button
-                style={styles.navButton}
                 onClick={() => navigate("/experience")}
               >
                 Experience
+              </Button>
+              <Button
+                style={styles.navButton}
+                onClick={() => navigate("/pets")}
+              >
+                Pets
               </Button>
             </Stack>
           </Box>
