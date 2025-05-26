@@ -100,7 +100,7 @@ export default function LandingPage() {
             }
           }}
         >
-          <Typography sx={styles.header}> Enter here!</Typography>
+          <Typography sx={styles.header}> Enter Site Here</Typography>
         </motion.div>
 
         {isOpen ? (

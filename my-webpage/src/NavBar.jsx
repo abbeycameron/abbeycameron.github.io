@@ -16,7 +16,7 @@ export default function Layout() {
 
   return (
     <div>
-      <AppBar sx={{ backgroundColor: "#e089c3" }}>
+      <AppBar sx={{ backgroundColor: "#d945a8" }}>
         <Toolbar>
           <Typography
             sx={{ fontFamily: "Bonbon" }}
