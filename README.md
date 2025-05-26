@@ -4,4 +4,4 @@
 
 cd into my-webpage
 npm start
-Uses MUI material, react router dom
+Uses MUI material, react router dom, Framer motion

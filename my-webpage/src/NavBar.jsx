@@ -1,6 +1,14 @@
 // Layout.jsx
 import { Outlet } from "react-router-dom";
-import { AppBar, Toolbar, Typography, Box, Stack, Button } from "@mui/material";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Box,
+  Stack,
+  Button,
+  IconButton,
+} from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 export default function Layout() {
@@ -13,13 +21,16 @@ export default function Layout() {
           <Typography
             sx={{ fontFamily: "Bonbon" }}
             variant="h4"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/home")}
           >
             Abbey Cameron
           </Typography>
           <Box sx={{ marginLeft: "auto" }}>
             <Stack direction="row" spacing={1}>
-              <Button style={styles.navButton} onClick={() => navigate("/")}>
+              <Button
+                style={styles.navButton}
+                onClick={() => navigate("/home")}
+              >
                 Home
               </Button>
               <Button
@@ -34,6 +45,32 @@ export default function Layout() {
               >
                 Pets
               </Button>
+              <a
+                href="https://github.com/abbeycameron"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconButton>
+                  <img
+                    src="/github-mark-white.png"
+                    alt="GitHub"
+                    style={{ width: 24, height: 24 }}
+                  />
+                </IconButton>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/abbey-cameron-b83670251/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconButton>
+                  <img
+                    src="/InBug-white.png"
+                    alt="LinkedIn"
+                    style={{ width: 24, height: 24 }}
+                  />
+                </IconButton>
+              </a>
             </Stack>
           </Box>
         </Toolbar>
