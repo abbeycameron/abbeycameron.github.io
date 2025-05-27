@@ -132,7 +132,7 @@ function Projects() {
           <Grid item xs={12} lg={6}>
             <InfoCard
               title="Kingston in Focus Dashboard"
-              description="A project made to display and share data about the Kingston area."
+              description="A project made to display and share data about the Kingston area. Wrote scripts to pull data from sources like Statistics Canada and visualized it as graphs."
               CardBackground={{
                 backgroundImage: `url("pug.jpg")`,
               }}

@@ -33,9 +33,8 @@ export default function InfoCard(props) {
       >
         <Box
           sx={{
-            backgroundColor: "rgba(248, 248, 248, 0.36)",
+            backgroundColor: "rgba(248, 248, 248, 0.53)",
             backdropFilter: "blur(6px)",
-            height: 75,
           }}
         >
           <CardContent sx={{ overflow: "auto", padding: 3 }}>
