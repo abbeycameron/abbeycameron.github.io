@@ -6,6 +6,7 @@ import { styles } from "./Styles";
 function HomePage() {
   return (
     <Container
+      id="home"
       sx={{ marginTop: 10, display: "flex", justifyContent: "center" }}
     >
       <Box sx={{ position: "relative", width: 2500, height: 850 }}>
@@ -13,7 +14,7 @@ function HomePage() {
         <Box
           sx={{
             width: 1300,
-            height: "100%",
+            height: 750,
             backgroundColor: "#d945a8",
             borderRadius: 20,
             zIndex: 1,
@@ -91,6 +92,20 @@ function HomePage() {
             objectFit: "contain",
             zIndex: 2,
             boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+          }}
+        />
+        {/*Hobbies box*/}
+        <Box
+          sx={{
+            width: 650,
+            height: 200,
+            backgroundColor: "#e089c3",
+            borderRadius: 15,
+            position: "absolute",
+            bottom: 270,
+            left: 380,
+            transform: "translateX(-50%)",
+            zIndex: 2,
           }}
         />
       </Box>

@@ -9,11 +9,11 @@ import {
   Button,
   IconButton,
 } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { styles } from "./Styles";
 
-export default function Layout() {
-  const navigate = useNavigate();
+export default function Layout({ children }) {
+  // const navigate = useNavigate();
 
   return (
     <div>
@@ -22,30 +22,27 @@ export default function Layout() {
           <Typography
             sx={{ fontFamily: "Bonbon" }}
             variant="h4"
-            onClick={() => navigate("/home")}
+            onClick={() => window.scrollTo({ top: -10, behavior: "smooth" })}
           >
             Abbey Cameron
           </Typography>
           <Box sx={{ marginLeft: "auto" }}>
             <Stack direction="row" spacing={1}>
-              <Button
-                style={styles.navButton}
-                onClick={() => navigate("/home")}
-              >
+              <Button style={styles.navButton} href="#home">
                 Home
               </Button>
-              <Button
-                style={styles.navButton}
-                onClick={() => navigate("/experience")}
-              >
+              <Button style={styles.navButton} href="#experience">
                 Experience
               </Button>
-              <Button
+              <Button style={styles.navButton} href="#projects">
+                Projects
+              </Button>
+              {/* <Button
                 style={styles.navButton}
                 onClick={() => navigate("/pets")}
               >
                 Pets
-              </Button>
+              </Button> */}
               <a
                 href="https://github.com/abbeycameron"
                 target="_blank"
@@ -77,9 +74,7 @@ export default function Layout() {
         </Toolbar>
       </AppBar>
 
-      <Box sx={{ marginTop: 5 }}>
-        <Outlet />
-      </Box>
+      <Box sx={{ marginTop: 5 }}>{children}</Box>
     </div>
   );
 }
