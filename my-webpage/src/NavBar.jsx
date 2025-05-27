@@ -10,6 +10,7 @@ import {
   IconButton,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { styles } from "./Styles";
 
 export default function Layout() {
   const navigate = useNavigate();
@@ -65,7 +66,7 @@ export default function Layout() {
               >
                 <IconButton>
                   <img
-                    src="/InBug-white.png"
+                    src="/InBug-White.png"
                     alt="LinkedIn"
                     style={{ width: 24, height: 24 }}
                   />
@@ -82,12 +83,3 @@ export default function Layout() {
     </div>
   );
 }
-
-export const styles = {
-  navButton: {
-    color: "#eee",
-    fontFamily: "Delius Swash Caps",
-    fontSize: "20px",
-    textTransform: "none",
-  },
-};

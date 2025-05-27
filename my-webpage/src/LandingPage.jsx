@@ -1,8 +1,10 @@
 import { Box, Card, Typography } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import FilterVintageIcon from "@mui/icons-material/FilterVintage";
+import { styles } from "./Styles";
 
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -249,22 +251,3 @@ export default function LandingPage() {
     </Box>
   );
 }
-
-export const styles = {
-  header: {
-    color: "#000",
-    fontFamily: "Delius Swash Caps",
-    fontSize: "27px",
-    textTransform: "none",
-  },
-  body: {
-    fontFamily: "Open Sans",
-    fontSize: "18px",
-    paddingBottom: 3,
-  },
-  chip: {
-    fontFamily: "Open Sans",
-    color: "#d945a8",
-    fontWeight: "bold",
-  },
-};

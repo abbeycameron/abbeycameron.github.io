@@ -1,6 +1,7 @@
 import { Typography, Box, Chip, Stack, Divider, ListItem } from "@mui/material";
 import ImgMediaCard from "./CardFormat";
 import { useState } from "react";
+import { styles } from "./Styles";
 
 function Experience() {
   const [selectedTag, setSelectedTag] = useState(null);
@@ -18,7 +19,7 @@ function Experience() {
       tags: ["Javascript", "Typescript"],
     },
     {
-      image: "react-native-logo.png",
+      image: "React-Native-Logo.png",
       alt: "React Native Logo",
       tags: ["Typescript", "CSS"],
     },
@@ -118,22 +119,3 @@ function Experience() {
   );
 }
 export default Experience;
-
-export const styles = {
-  header: {
-    color: "#000",
-    fontFamily: "Delius Swash Caps",
-    fontSize: "27px",
-    textTransform: "none",
-  },
-  body: {
-    fontFamily: "Open Sans",
-    fontSize: "18px",
-    paddingBottom: 3,
-  },
-  chip: {
-    fontFamily: "Open Sans",
-    color: "#d945a8",
-    fontWeight: "bold",
-  },
-};
