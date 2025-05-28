@@ -16,7 +16,23 @@ function HomePage() {
             backgroundColor: "#d945a8",
             borderRadius: 20,
             zIndex: 1,
-            position: "relative",
+            position: "absolute",
+            transform: "translateX(-50%)",
+            left: "50%",
+          }}
+        />
+        <Box
+          component="img"
+          src="silver-metallic-textured-background.jpg"
+          sx={{
+            width: 1300,
+            height: 750,
+            borderRadius: 20,
+            zIndex: 2,
+            position: "absolute",
+            opacity: 0.15,
+            transform: "translateX(-50%)",
+            left: "50%",
           }}
         />
         {/* name box */}
@@ -27,8 +43,8 @@ function HomePage() {
             backgroundColor: "#e089c3",
             borderRadius: 15,
             position: "absolute",
-            top: 50,
-            left: 390,
+            top: 80,
+            left: 380,
             transform: "translateX(-50%)",
             zIndex: 2,
             boxShadow: 3,
@@ -39,7 +55,7 @@ function HomePage() {
           sx={{
             ...styles.title,
             position: "absolute",
-            top: 55,
+            top: 85,
             left: 90,
             zIndex: 2,
             color: "#eee",
@@ -56,8 +72,8 @@ function HomePage() {
             backgroundColor: "#e089c3",
             borderRadius: 15,
             position: "absolute",
-            top: 150,
-            left: 390,
+            top: 180,
+            left: 380,
             transform: "translateX(-50%)",
             zIndex: 2,
             boxShadow: 3,
@@ -68,7 +84,7 @@ function HomePage() {
           sx={{
             ...styles.body,
             position: "absolute",
-            top: 170,
+            top: 200,
             left: 85,
             zIndex: 2,
             maxWidth: 600,
@@ -85,8 +101,8 @@ function HomePage() {
           alt="Overlay"
           sx={{
             position: "absolute",
-            top: 50,
-            right: 150,
+            top: 80,
+            right: 90,
             width: 240,
             height: 300,
             borderRadius: 10,
@@ -104,8 +120,8 @@ function HomePage() {
             backgroundColor: "#e089c3",
             borderRadius: 15,
             position: "absolute",
-            bottom: 270,
-            left: 390,
+            bottom: 240,
+            left: 380,
             transform: "translateX(-50%)",
             zIndex: 2,
             boxShadow: 3,
