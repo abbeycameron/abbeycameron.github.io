@@ -1,7 +1,5 @@
-import "./App.css";
-import * as React from "react";
 import { Container, Typography, Box } from "@mui/material";
-import { styles } from "./Styles";
+import { styles } from "../components/Styles";
 
 function HomePage() {
   return (
@@ -33,6 +31,8 @@ function HomePage() {
             left: 380,
             transform: "translateX(-50%)",
             zIndex: 2,
+            boxShadow: 3,
+            paddingX: 2,
           }}
         />
         <Typography
@@ -60,6 +60,8 @@ function HomePage() {
             left: 380,
             transform: "translateX(-50%)",
             zIndex: 2,
+            boxShadow: 3,
+            paddingX: 2,
           }}
         />
         <Typography
@@ -106,6 +108,8 @@ function HomePage() {
             left: 380,
             transform: "translateX(-50%)",
             zIndex: 2,
+            boxShadow: 3,
+            paddingX: 2,
           }}
         />
       </Box>

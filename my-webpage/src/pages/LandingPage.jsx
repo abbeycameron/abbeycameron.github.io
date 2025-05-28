@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import FilterVintageIcon from "@mui/icons-material/FilterVintage";
-import { styles } from "./Styles";
+import { styles } from "../components/Styles";
 
 export default function LandingPage() {
   const navigate = useNavigate();

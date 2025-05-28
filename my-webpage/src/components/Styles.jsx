@@ -16,6 +16,12 @@ export const styles = {
     fontSize: "18px",
     paddingBottom: 3,
   },
+  bodywhite: {
+    fontFamily: "Open Sans",
+    fontSize: "18px",
+    paddingBottom: 3,
+    color: "#eee",
+  },
   chip: {
     fontFamily: "Open Sans",
     color: "#d945a8",

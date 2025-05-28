@@ -1,12 +1,12 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import HomePage from "./Home";
+import HomePage from "./pages/Home";
 import PetsPage from "./PetsPage";
-import Layout from "./NavBar";
-import Experience from "./Experience";
-import LandingPage from "./LandingPage";
-import ScrollPage from "./ScrollingPage";
+import Layout from "./components/NavBar";
+import Experience from "./pages/Experience";
+import LandingPage from "./pages/LandingPage";
+import ScrollPage from "./pages/ScrollingPage";
 
 function App() {
   return (

@@ -7,9 +7,9 @@ import {
   ListItem,
   Container,
 } from "@mui/material";
-import ImgMediaCard from "./CardFormat";
+import ImgMediaCard from "../components/CardFormat";
 import { useState } from "react";
-import { styles } from "./Styles";
+import { styles } from "../components/Styles";
 
 function Experience() {
   const [selectedTag, setSelectedTag] = useState(null);

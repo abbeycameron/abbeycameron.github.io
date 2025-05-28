@@ -22,8 +22,8 @@ export default function InfoCard(props) {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "17rem",
-          width: "24rem",
+          height: "24rem",
+          width: "35rem",
           display: "flex",
           flexDirection: "column",
           justifyContent: "end",
@@ -41,11 +41,7 @@ export default function InfoCard(props) {
             <Typography variant="h6" component="div" sx={styles.body}>
               {props.title}
             </Typography>
-            {hovered && (
-              <Typography variant="body2" sx={styles.body}>
-                {props.description}
-              </Typography>
-            )}
+            {hovered && <Box>{props.content}</Box>}
           </CardContent>
         </Box>
       </Card>
