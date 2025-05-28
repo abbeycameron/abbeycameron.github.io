@@ -1,17 +1,23 @@
-import * as React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import { Box, CardActionArea } from "@mui/material";
+import { motion } from "framer-motion";
+import {
+  Card,
+  CardContent,
+  Typography,
+  Box,
+  CardActionArea,
+} from "@mui/material";
 import { useState } from "react";
-import { styles } from "./Styles";
+
+const MotionBox = motion.create(Box);
 
 export default function InfoCard(props) {
   const [hovered, setHovered] = useState(false);
+
   return (
     <CardActionArea
+      sx={{ borderRadius: 15, overflow: "hidden" }}
       href={props.href}
-      target={"_blank"}
+      target="_blank"
       rel="noopener noreferrer"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -28,22 +34,36 @@ export default function InfoCard(props) {
           flexDirection: "column",
           justifyContent: "end",
           borderRadius: 15,
+          position: "relative",
+          overflow: "hidden",
         }}
         {...props.Card}
       >
-        <Box
+        <MotionBox
+          animate={{
+            y: hovered ? 0 : 190,
+          }}
+          transition={{ duration: 0.25, ease: "easeOut" }}
           sx={{
+            position: "absolute",
+            bottom: 0,
+            width: "100%",
             backgroundColor: "rgba(248, 248, 248, 0.53)",
             backdropFilter: "blur(6px)",
           }}
         >
-          <CardContent sx={{ overflow: "auto", padding: 3 }}>
-            <Typography variant="h6" component="div" sx={styles.body}>
+          <CardContent sx={{ padding: 4, borderRadius: 20 }}>
+            <Typography
+              variant="h6"
+              component="div"
+              sx={props.styles?.body}
+              paddingBottom={2}
+            >
               {props.title}
             </Typography>
-            {hovered && <Box>{props.content}</Box>}
+            <Box>{props.content}</Box>
           </CardContent>
-        </Box>
+        </MotionBox>
       </Card>
     </CardActionArea>
   );

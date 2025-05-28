@@ -90,7 +90,8 @@ function Projects() {
                 <>
                   <Typography variant="body2" sx={styles.body}>
                     A 2D side scrolling game built using Unity and C# where you
-                    play as a fish and defeat enemies each level.
+                    play as a fish and defeat enemies each level. Designed and
+                    developed all levels with two friends.
                   </Typography>
                   <Box
                     sx={{
@@ -123,9 +124,9 @@ function Projects() {
               content={
                 <>
                   <Typography variant="body2" sx={styles.body}>
-                    A website that allows users to view parks in the KFLA region
-                    and mark them off as visited, as well as keep a diary of
-                    their trips."
+                    A website that allows users to view a map of parks in the
+                    KFLA region and mark them off as visited, as well as keep a
+                    diary of their trips via a note taking feature.
                   </Typography>
                   <Box
                     sx={{
@@ -218,9 +219,9 @@ function Projects() {
               content={
                 <>
                   <Typography variant="body2" sx={styles.body}>
-                    A project made to display and share data about the Kingston
-                    area. Wrote scripts to pull data from sources (e.g.,
-                    Statistics Canada) and visualized it as graphs and maps.
+                    A project made to display and share data about Kingston.
+                    Wrote scripts to pull data from sources (e.g., Statistics
+                    Canada) and visualized it as graphs and maps.
                   </Typography>
                   <Box
                     sx={{
@@ -271,12 +272,6 @@ function Projects() {
                       alt="Wordpress"
                       width={60}
                       height={60}
-                    />
-                    <img
-                      src="JavaScript-logo.png"
-                      alt="JavaScript"
-                      width={50}
-                      height={50}
                     />
                   </Box>
                 </>

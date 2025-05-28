@@ -102,7 +102,7 @@ function HomePage() {
           sx={{
             position: "absolute",
             top: 80,
-            right: 90,
+            right: 70,
             width: 240,
             height: 300,
             borderRadius: 10,
