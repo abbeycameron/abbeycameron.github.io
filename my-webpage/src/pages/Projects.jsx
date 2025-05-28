@@ -282,7 +282,7 @@ function Projects() {
                 </>
               }
               CardBackground={{
-                backgroundImage: `url("pug.jpg")`,
+                backgroundImage: `url("karen.png")`,
               }}
               href="https://www.queensu.ca/vpr/funding/search/"
             />
