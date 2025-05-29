@@ -27,6 +27,11 @@ export const styles = {
     color: "#d945a8",
     fontWeight: "bold",
   },
+  chip2: {
+    fontFamily: "Open Sans",
+    color: "#eee",
+    fontWeight: "bold",
+  },
   navButton: {
     color: "#eee",
     fontFamily: "Delius Swash Caps",

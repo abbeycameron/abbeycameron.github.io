@@ -60,7 +60,8 @@ function Projects() {
           <Typography textAlign="center" width={750} sx={styles.bodywhite}>
             Below are a few projects I have worked on, some personal and some
             through my time at the Centre for Advanced Computing. Click on or
-            hover over any project to learn more.
+            hover over any project to learn more. More projects can be viewed on
+            my GitHub.
           </Typography>
           {/* </Box> */}
         </Box>

@@ -1,4 +1,4 @@
-import { Container, Typography, Box } from "@mui/material";
+import { Container, Typography, Box, Chip, Stack } from "@mui/material";
 import { styles } from "../components/Styles";
 
 function HomePage() {
@@ -12,7 +12,7 @@ function HomePage() {
         <Box
           sx={{
             width: 1300,
-            height: 750,
+            height: 820,
             backgroundColor: "#d945a8",
             borderRadius: 20,
             zIndex: 1,
@@ -26,7 +26,7 @@ function HomePage() {
           src="silver-metallic-textured-background.jpg"
           sx={{
             width: 1300,
-            height: 750,
+            height: 820,
             borderRadius: 20,
             zIndex: 2,
             position: "absolute",
@@ -72,7 +72,7 @@ function HomePage() {
             backgroundColor: "#e089c3",
             borderRadius: 15,
             position: "absolute",
-            top: 180,
+            top: 230,
             left: 380,
             transform: "translateX(-50%)",
             zIndex: 2,
@@ -84,34 +84,70 @@ function HomePage() {
           sx={{
             ...styles.body,
             position: "absolute",
-            top: 200,
+            top: 270,
             left: 85,
             zIndex: 2,
             maxWidth: 600,
           }}
         >
           {" "}
-          Here is some text, blah blah blah some more text idk what im writing
-          about i just need to fill the space. i like dogs and skating and
-          reading and whatnot.
+          blah
         </Typography>
         <Box
-          component="img"
-          src="IMG_3138.jpg"
-          alt="Overlay"
           sx={{
-            position: "absolute",
-            top: 80,
-            right: 70,
-            width: 240,
-            height: 300,
-            borderRadius: 10,
-            border: "7px solid #e089c3",
-            objectFit: "contain",
-            zIndex: 2,
-            boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+            position: "relative",
+            width: 288,
+            height: 420,
+            top: 150,
+            left: 800,
+            display: "flex",
+            flexWrap: "wrap",
           }}
-        />
+        >
+          <Box
+            component="img"
+            src="IMG_3138.jpg"
+            alt="Overlay"
+            sx={{
+              position: "absolute",
+              // top: 80,
+              // right: 0,
+              width: 288,
+              height: 360,
+              borderRadius: 10,
+              border: "7px solid #e089c3",
+              objectFit: "contain",
+              zIndex: 2,
+              boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+            }}
+          />
+          <Stack
+            direction="row"
+            spacing={1}
+            justifyContent="center"
+            sx={{
+              position: "absolute",
+              top: 400,
+              left: 0,
+              width: 300,
+              zIndex: 1,
+              gap: 1,
+              display: "flex",
+              flexWrap: "wrap",
+            }}
+          >
+            <Chip label="Reading" sx={styles.chip2} variant="outlined" />
+            <Chip label="Animals" variant="outlined" sx={styles.chip2} />
+            <Chip label={"Dance"} sx={styles.chip2} variant="outlined" />
+            <Chip
+              label={"Roller Skating"}
+              sx={styles.chip2}
+              variant="outlined"
+            />
+            <Chip label="Scuba Diving" variant="outlined" sx={styles.chip2} />
+          </Stack>
+        </Box>
+
         {/*Hobbies box*/}
         <Box
           sx={{
@@ -120,7 +156,7 @@ function HomePage() {
             backgroundColor: "#e089c3",
             borderRadius: 15,
             position: "absolute",
-            bottom: 240,
+            bottom: 150,
             left: 380,
             transform: "translateX(-50%)",
             zIndex: 2,
@@ -128,6 +164,20 @@ function HomePage() {
             paddingX: 2,
           }}
         />
+        <Typography
+          sx={{
+            ...styles.body,
+            position: "absolute",
+            bottom: 185,
+            left: 85,
+            zIndex: 2,
+            maxWidth: 600,
+          }}
+        >
+          Outside of work and school, I have various hobbies including dance,
+          swimming, and playing roller derby. In addition, I have a strong love
+          and interest in animals. I enjoy learning and doing new things.
+        </Typography>
       </Box>
     </Container>
   );
