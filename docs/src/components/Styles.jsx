@@ -5,6 +5,12 @@ export const styles = {
     variant: "h3",
     fontSize: "48px",
   },
+  title2: {
+    color: "#eee",
+    fontFamily: "Bonbon",
+    variant: "h3",
+    fontSize: "48px",
+  },
   header: {
     color: "#000",
     fontFamily: "Delius Swash Caps",

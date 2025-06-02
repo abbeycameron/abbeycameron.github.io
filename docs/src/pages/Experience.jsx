@@ -69,8 +69,8 @@ function Experience() {
           </Typography>
 
           <ListItem variant="body1" sx={styles.body}>
-            Designed and developed web-based and mobile applications for
-            not-for-profit and health organizations.
+            Designed and developed full stack web-based and mobile applications
+            for not-for-profit and health organizations.
           </ListItem>
         </Box>
 

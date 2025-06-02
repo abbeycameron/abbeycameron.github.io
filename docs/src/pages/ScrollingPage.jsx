@@ -9,11 +9,11 @@ export default function ScrollPage() {
       <div id="home" style={{ scrollMarginTop: "80px" }}>
         <HomePage />
       </div>
-      <Divider></Divider>
+
       <div id="experience" style={{ scrollMarginTop: "80px" }}>
         <Experience />
       </div>
-      <Divider></Divider>
+
       <div id="projects" style={{ scrollMarginTop: "80px" }}>
         <Projects />
       </div>

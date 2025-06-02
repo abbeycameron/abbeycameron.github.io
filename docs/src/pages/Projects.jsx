@@ -16,7 +16,7 @@ function Projects() {
       <Box
         sx={{
           width: 1300,
-          height: 1200,
+          height: 1600,
           backgroundColor: "#d945a8",
           borderRadius: 20,
           zIndex: 1,
@@ -92,7 +92,7 @@ function Projects() {
                   <Typography variant="body2" sx={styles.body}>
                     A 2D side scrolling game built using Unity and C# where you
                     play as a fish and defeat enemies each level. Designed and
-                    developed all levels with two friends.
+                    developed all levels.
                   </Typography>
                   <Box
                     sx={{
@@ -152,6 +152,40 @@ function Projects() {
                 backgroundImage: `url("map.png")`,
               }}
               href="https://github.com/abbeycameron/abbey-onboarding"
+            />
+          </Grid>
+          <Grid item xs={12} lg={6}>
+            <InfoCard
+              title="Quality Qode - CLI Task Manager System"
+              content={
+                <>
+                  <Typography variant="body2" sx={styles.body}>
+                    A CLI program that allows users to manage employees and
+                    tasks. Black box, white box tests, and monkey patching have
+                    been performed.
+                  </Typography>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      gap: 2,
+                      marginTop: 1,
+                      flexDirection: "row",
+                      alignItems: "center",
+                    }}
+                  >
+                    <img
+                      src="SQLAlchemy.png"
+                      alt="SQLAlchemy"
+                      width={110}
+                      height={60}
+                    />
+                  </Box>
+                </>
+              }
+              CardBackground={{
+                backgroundImage: `url("codesnip.png")`,
+              }}
+              href="https://github.com/alesspanzica/quality-qode"
             />
           </Grid>
         </Grid>
@@ -220,9 +254,9 @@ function Projects() {
               content={
                 <>
                   <Typography variant="body2" sx={styles.body}>
-                    A project made to display and share data about Kingston.
-                    Wrote scripts to pull data from sources (e.g., Statistics
-                    Canada) and visualized it as graphs and maps.
+                    A project to display and share data about Kingston. Wrote
+                    scripts to pull data from sources (e.g. Statistics Canada)
+                    and visualized it as graphs and maps.
                   </Typography>
                   <Box
                     sx={{
