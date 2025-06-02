@@ -32,6 +32,7 @@ function HomePage() {
             zIndex: 2,
             flexWrap: { xs: "wrap", md: "nowrap" },
             pt: 6,
+            pl: 4,
           }}
         >
           {/* LEFT: Text Boxes */}
@@ -102,7 +103,7 @@ function HomePage() {
             sx={{
               display: "flex",
               flexDirection: "column",
-              alignItems: "flex-end",
+              alignItems: "center",
               gap: 2,
               pt: 5,
               pr: 6,
@@ -112,8 +113,8 @@ function HomePage() {
               component="img"
               src="IMG_3138.jpg"
               sx={{
-                width: 288,
-                height: 360,
+                width: 320,
+                height: 400,
                 borderRadius: 20,
                 border: "7px solid #e089c3",
                 objectFit: "contain",
@@ -125,7 +126,7 @@ function HomePage() {
               spacing={2}
               flexWrap="wrap"
               justifyContent="center"
-              sx={{ maxWidth: 300, rowGap: 1 }}
+              sx={{ maxWidth: 308, rowGap: 1 }}
               pb={1}
             >
               {[
