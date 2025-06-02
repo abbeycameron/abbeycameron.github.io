@@ -5,17 +5,20 @@ function HomePage() {
   return (
     <Container
       id="home"
+      maxWidth={false}
       sx={{ mt: 10, display: "flex", justifyContent: "center", pt: 3, pb: 5 }}
     >
       <Box
         sx={{
-          width: 1900,
-          maxWidth: 1300,
+          width: 1300,
+          maxWidth: 1900,
           backgroundColor: "#d945a8",
           borderRadius: 20,
           p: 4,
           position: "relative",
           height: 700,
+          pr: 4,
+          pl: 4,
         }}
       >
         {/* Main Content: Text + Image Side by Side */}
@@ -43,7 +46,7 @@ function HomePage() {
           >
             <Box
               sx={{
-                width: "90%",
+                width: "70%",
                 backgroundColor: "#e089c3",
                 borderRadius: 20,
                 p: 3,
@@ -63,7 +66,7 @@ function HomePage() {
                 pt: 4,
                 pb: 1,
                 boxShadow: 3,
-                width: "90%",
+                width: "80%",
               }}
             >
               <Typography sx={styles.body}>
@@ -82,14 +85,14 @@ function HomePage() {
                 pt: 4,
                 pb: 1,
                 boxShadow: 3,
-                width: "90%",
+                width: "80%",
               }}
             >
               <Typography sx={styles.body}>
                 Outside of work and school, I have various hobbies including
-                dance, swimming, and playing roller derby. In addition, I love
-                animals and enjoy learning new things about them. I like to
-                learn new skills and share them with others.
+                dance, swimming, playing roller derby, and listening to music.
+                In addition, I love animals and enjoy learning new things about
+                them. I like to learn new skills and share them with others.
               </Typography>
             </Box>
           </Stack>
@@ -135,8 +138,12 @@ function HomePage() {
                 <Chip
                   key={hobby}
                   label={hobby}
-                  variant="outlined"
-                  sx={{ color: "#fff", borderColor: "#fff", mb: 2 }}
+                  sx={{
+                    color: "#000",
+                    borderColor: "#fff",
+                    backgroundColor: "#e089c3",
+                    mb: 2,
+                  }}
                 />
               ))}
             </Stack>
