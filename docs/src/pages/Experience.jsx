@@ -31,6 +31,11 @@ function Experience() {
       alt: "React Native Logo",
       tags: ["Typescript", "CSS"],
     },
+    {
+      image: "android_studio.png",
+      alt: "Android Studio Logo",
+      tags: "Typescript",
+    },
   ];
 
   const filteredCards = selectedTag
