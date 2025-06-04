@@ -1,5 +1,5 @@
 // Layout.jsx
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
@@ -11,9 +11,30 @@ import {
 } from "@mui/material";
 // import { useNavigate } from "react-router-dom";
 import { styles } from "./Styles";
+import { useEffect, useRef } from "react";
 
 export default function Layout({ children }) {
   // const navigate = useNavigate();
+
+  const location = useLocation();
+  const lastHash = useRef("");
+
+  // listen to location change using useEffect with location as dependency
+  // https://jasonwatmore.com/react-router-v6-listen-to-location-route-change-without-history-listen
+  useEffect(() => {
+    if (location.hash) {
+      lastHash.current = location.hash.slice(1); // safe hash for further use after navigation
+    }
+
+    if (lastHash.current && document.getElementById(lastHash.current)) {
+      setTimeout(() => {
+        document
+          .getElementById(lastHash.current)
+          ?.scrollIntoView({ behavior: "smooth", block: "start" });
+        lastHash.current = "";
+      }, 100);
+    }
+  }, [location]);
 
   return (
     <div>
@@ -28,13 +49,13 @@ export default function Layout({ children }) {
           </Typography>
           <Box sx={{ marginLeft: "auto" }}>
             <Stack direction="row" spacing={1}>
-              <Button style={styles.navButton} href="#home">
+              <Button style={styles.navButton} href="#/home#home">
                 Home
               </Button>
-              <Button style={styles.navButton} href="#experience">
+              <Button style={styles.navButton} href="#/home#experience">
                 Experience
               </Button>
-              <Button style={styles.navButton} href="#projects">
+              <Button style={styles.navButton} href="#/home#projects">
                 Projects
               </Button>
               {/* <Button
